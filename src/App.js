@@ -21,13 +21,17 @@ class App extends React.Component {
     });
   }
 
+  handleCountryChange = async (country) => {
+    console.log(country);
+  };
+
   render() {
     const { data } = this.state;
     return (
       <div className={styles.container}>
         <Cards data={data} />
         <Chart data={data} />
-        <CountryPicker />
+        <CountryPicker handleCountryChange={this.componentWillUnmount/>
       </div>
     );
   }

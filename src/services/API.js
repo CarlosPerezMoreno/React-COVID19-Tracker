@@ -28,5 +28,17 @@ export const fetchDailyData = async () => {
     }));
 
     return modifiedData;
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchCountries = async () => {
+  try {
+    const response = await axios.get(`${API}/countries`);
+
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
 };
