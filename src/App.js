@@ -6,7 +6,7 @@ import CountryPicker from "./components/CountryPicker/CountryPicker";
 
 import { fetchData } from "./services/API";
 
-import "./App.module.css";
+import styles from "./App.module.css";
 
 class App extends React.Component {
   state = {
@@ -24,9 +24,9 @@ class App extends React.Component {
   render() {
     const { data } = this.state;
     return (
-      <div className="container">
+      <div className={styles.container}>
         <Cards data={data} />
-        <Chart />
+        <Chart data={data} />
         <CountryPicker />
       </div>
     );
