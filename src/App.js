@@ -11,13 +11,14 @@ import styles from "./App.module.css";
 class App extends React.Component {
   state = {
     data: {},
+    country: "",
   };
 
   async componentDidMount() {
-    const fetchedData = await fetchData();
+    const data = await fetchData();
 
     this.setState({
-      data: fetchedData,
+      data,
     });
   }
 
@@ -28,11 +29,12 @@ class App extends React.Component {
   };
 
   render() {
-    const { data } = this.state;
+    const { data, country } = this.state;
+
     return (
       <div className={styles.container}>
         <Cards data={data} />
-        <Chart data={data} />
+        <Chart data={data} country={country} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
       </div>
     );
