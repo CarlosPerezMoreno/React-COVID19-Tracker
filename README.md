@@ -1,4 +1,4 @@
-# "To Do" Application
+# COVID 19 Tracker
 
 _Coronavirus Real Time Tracker_
 
