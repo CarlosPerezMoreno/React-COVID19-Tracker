@@ -6,9 +6,6 @@ _Coronavirus Real Time Tracker_
 
 This App shows information and data about the pandemic, with daily statistics.
 
-```
-npm install --save-dev @testing-library/react
-```
 ### Created by:
 
 Carlos Pérez
